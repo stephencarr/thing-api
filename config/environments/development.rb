@@ -29,7 +29,10 @@ Rails.application.configure do
   Rails.application.configure do
     config.action_mailer.default_url_options = { :host => 'api.thing.dev' }
     config.action_mailer.delivery_method = :smtp
-    config.action_mailer.smtp_settings = { :address => 'localhost', :port => 1025 }
+    config.action_mailer.smtp_settings = {
+      :address => 'localhost',
+      :port => 1025
+    }
   end
 
   # Don't care if the mailer can't send.

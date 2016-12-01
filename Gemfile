@@ -5,7 +5,12 @@ source 'https://rubygems.org'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
-gem 'mysql2'
+group :development, :test do
+  gem 'mysql2'
+end
+group :production do
+  gem 'pg'
+end
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -50,3 +55,6 @@ gem 'rack-cors', :require => 'rack/cors'
 
 # Utils
 gem 'active_model_serializers'
+
+# Mailer
+gem 'sendgrid-ruby'

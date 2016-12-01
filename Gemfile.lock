@@ -93,6 +93,7 @@ GEM
       hashie (>= 1.2, < 4)
       rack (>= 1.0, < 3)
     orm_adapter (0.5.0)
+    pg (0.19.0)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -153,6 +154,9 @@ GEM
       rspec-mocks (~> 3.5.0)
       rspec-support (~> 3.5.0)
     rspec-support (3.5.0)
+    ruby_http_client (3.0.0)
+    sendgrid-ruby (4.0.6)
+      ruby_http_client (~> 3.0.0)
     slop (3.6.0)
     spring (2.0.0)
       activesupport (>= 4.2)
@@ -188,12 +192,14 @@ DEPENDENCIES
   listen (~> 3.0.5)
   mysql2
   omniauth
+  pg
   pry-rails
   pry-remote
   puma (~> 3.0)
   rack-cors
   rails (~> 5.0.0, >= 5.0.0.1)
   rspec-rails (>= 3.5.0)
+  sendgrid-ruby
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
